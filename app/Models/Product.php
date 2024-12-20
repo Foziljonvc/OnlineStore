@@ -11,6 +11,15 @@ class Product extends Model
 {
     use HasFactory, SoftDeletes, Notifiable;
 
+    protected $fillable = [
+        'name',
+        'description',
+        'price',
+        'stock_quantity',
+        'image_url',
+        'is_active',
+        'deleted_at',
+    ];
 
 
     public function categories(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
